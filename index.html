@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop Directory</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Shop Directory</h1>
+            <p>Discover amazing shops in your area</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="filters">
+            <h2>Filter by Category</h2>
+            <div class="category-filters" id="categoryFilters">
+                <button class="filter-btn active" data-category="all">All Shops</button>
+            </div>
+        </section>
+
+        <section class="shops">
+            <div class="shop-grid" id="shopGrid">
+                <!-- Shops will be loaded here dynamically -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Shop Directory. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
