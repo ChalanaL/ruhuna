@@ -142,26 +142,4 @@
     "rating": 4.2,
     "reviews": 156
   },
-  {
-    "id": 14,
-    "name": "Artisan Jewelry Gallery",
-    "category": "Fashion & Accessories",
-    "description": "Handcrafted jewelry and accessories by local artisans. Unique pieces for special occasions and everyday elegance.",
-    "address": "285 Artisan Alley, Creative District",
-    "phone": "+1 (555) 456-7891",
-    "website": "https://artisanjewelry.com",
-    "rating": 4.6,
-    "reviews": 78
-  },
-  {
-    "id": 15,
-    "name": "Morning Brew Cafe",
-    "category": "Coffee & Tea",
-    "description": "Neighborhood cafe serving specialty coffee, tea blends, and homemade breakfast items. Your perfect morning destination.",
-    "address": "396 Sunrise Boulevard, Neighborhood Center",
-    "phone": "+1 (555) 567-8902",
-    "website": "https://morningbrew.com",
-    "rating": 4.3,
-    "reviews": 201
-  }
 ]
