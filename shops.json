@@ -13,7 +13,7 @@
   {
     "id": 2,
     "name": "Fashion Forward Boutique",
-    "category": "Fashion & Clothing",
+    "category": "grossory",
     "description": "Trendy clothing store featuring the latest fashion trends for men and women. Curated selection of designer and affordable brands.",
     "address": "456 Fashion Avenue, Shopping District",
     "phone": "+1 (555) 234-5678",
@@ -38,6 +38,17 @@
     "category": "Home & Garden",
     "description": "Complete garden center with plants, tools, soil, and expert gardening advice. Transform your space into a green paradise.",
     "address": "321 Garden Lane, Suburb",
+    "phone": "+1 (555) 456-7890",
+    "website": "https://greenthumb.com",
+    "rating": 4.3,
+    "reviews": 156
+  },
+  {
+    "id": 5,
+    "name": "dal kade",
+    "category": "grossory",
+    "description": "saf.",
+    "address": "test",
     "phone": "+1 (555) 456-7890",
     "website": "https://greenthumb.com",
     "rating": 4.3,
