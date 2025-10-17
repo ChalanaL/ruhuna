@@ -5,33 +5,51 @@ A static website showcasing local shops with categorization and filtering functi
 ## Features
 
 - **Responsive Design**: Works perfectly on desktop, tablet, and mobile devices
-- **Category Filtering**: Filter shops by different categories
+- **Category Filtering**: Filter shops by different main categories
+- **Subcategory Filtering**: Further refine your search with specific subcategories
+- **Dual Filtering System**: Use both category and subcategory filters together
 - **Dynamic Loading**: Shop data loaded from JSON file
+- **Search Functionality**: Search by name, category, subcategory, or description
 - **Modern UI**: Clean and attractive user interface
 - **GitHub Pages Ready**: Configured for easy deployment
 
-## Categories
+## Categories & Subcategories
 
-- Coffee & Tea
-- Fashion & Clothing
-- Electronics & Technology
-- Home & Garden
-- Restaurants & Food
-- Health & Fitness
-- Books & Media
-- Music & Entertainment
-- Automotive
-- Health & Beauty
-- Toys & Games
-- Fashion & Accessories
+- **Coffee & Tea**
+  - Coffee Shop
+  - Cafe
+- **Fashion & Clothing**
+  - Women's Fashion
+- **Electronics & Technology**
+  - Computer & Mobile
+- **Home & Garden**
+  - Plants & Gardening
+  - Home Decor & Furniture
+- **Restaurants & Food**
+  - Italian Cuisine
+  - Bakery & Desserts
+- **Health & Fitness**
+  - Gym & Fitness Center
+- **Books & Media**
+  - Bookstore
+- **Music & Entertainment**
+  - Music Store
+- **Automotive**
+  - Auto Repair & Service
+- **Health & Beauty**
+  - Spa & Wellness
+- **Toys & Games**
+  - Children's Toys
+- **Fashion & Accessories**
+  - Jewelry & Accessories
 
 ## Shop Information Includes
 
 - Shop name and description
-- Category classification
+- Category and subcategory classification
 - Contact information (address, phone, website)
 - Ratings and reviews
-- Professional styling
+- Professional styling with dual-badge display
 
 ## Files Structure
 
@@ -53,6 +71,7 @@ A static website showcasing local shops with categorization and filtering functi
   "id": 16,
   "name": "Your Shop Name",
   "category": "Shop Category",
+  "subcategory": "Shop Subcategory",
   "description": "Description of your shop",
   "address": "123 Your Street, City",
   "phone": "+1 (555) 123-4567",
