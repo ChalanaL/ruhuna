@@ -1,10 +1,12 @@
 // Global variables
 let shopsData = [];
 let currentCategory = 'all';
+let currentSubcategory = 'all';
 
 // DOM elements
 const shopGrid = document.getElementById('shopGrid');
 const categoryFilters = document.getElementById('categoryFilters');
+const subcategoryFilters = document.getElementById('subcategoryFilters');
 const searchInput = document.getElementById('searchInput');
 const clearSearchBtn = document.getElementById('clearSearch');
 
@@ -18,8 +20,9 @@ document.addEventListener('DOMContentLoaded', function() {
 const fallbackShopsData = [
   {
     "id": 1,
-    "name": "Urban Coffee House",
+    "name": "Urban Coffee House2",
     "category": "Coffee & Tea",
+    "subcategory": "Coffee Shop",
     "description": "A cozy coffee shop serving artisanal coffee, fresh pastries, and light meals. Perfect for work, study, or catching up with friends.",
     "address": "123 Main Street, Downtown",
     "phone": "+1 (555) 123-4567",
@@ -31,6 +34,7 @@ const fallbackShopsData = [
     "id": 2,
     "name": "Fashion Forward Boutique",
     "category": "Fashion & Clothing",
+    "subcategory": "Women's Fashion",
     "description": "Trendy clothing store featuring the latest fashion trends for men and women. Curated selection of designer and affordable brands.",
     "address": "456 Fashion Avenue, Shopping District",
     "phone": "+1 (555) 234-5678",
@@ -42,6 +46,7 @@ const fallbackShopsData = [
     "id": 3,
     "name": "Tech Solutions Store",
     "category": "Electronics & Technology",
+    "subcategory": "Computer & Mobile",
     "description": "Your one-stop shop for all things tech. Smartphones, laptops, accessories, and expert repair services available.",
     "address": "789 Tech Boulevard, Business Center",
     "phone": "+1 (555) 345-6789",
@@ -53,6 +58,7 @@ const fallbackShopsData = [
     "id": 4,
     "name": "Green Thumb Garden Center",
     "category": "Home & Garden",
+    "subcategory": "Plants & Gardening",
     "description": "Complete garden center with plants, tools, soil, and expert gardening advice. Transform your space into a green paradise.",
     "address": "321 Garden Lane, Suburb",
     "phone": "+1 (555) 456-7890",
@@ -64,6 +70,7 @@ const fallbackShopsData = [
     "id": 5,
     "name": "Bella Vista Restaurant",
     "category": "Restaurants & Food",
+    "subcategory": "Italian Cuisine",
     "description": "Authentic Italian cuisine in an elegant setting. Fresh pasta, wood-fired pizzas, and an extensive wine collection.",
     "address": "654 Culinary Street, Historic District",
     "phone": "+1 (555) 567-8901",
@@ -72,108 +79,10 @@ const fallbackShopsData = [
     "reviews": 312
   },
   {
-    "id": 6,
-    "name": "Fitness First Gym",
-    "category": "Health & Fitness",
-    "description": "State-of-the-art fitness facility with modern equipment, group classes, and personal training services.",
-    "address": "987 Wellness Way, Sports Complex",
-    "phone": "+1 (555) 678-9012",
-    "website": "https://fitnessfirst.com",
-    "rating": 4.4,
-    "reviews": 198
-  },
-  {
-    "id": 7,
-    "name": "Pages & Prose Bookstore",
-    "category": "Books & Media",
-    "description": "Independent bookstore with carefully curated fiction, non-fiction, and local author selections. Cozy reading nooks available.",
-    "address": "147 Literary Lane, Arts Quarter",
-    "phone": "+1 (555) 789-0123",
-    "website": "https://pagesandprose.com",
-    "rating": 4.6,
-    "reviews": 94
-  },
-  {
-    "id": 8,
-    "name": "Sweet Dreams Bakery",
-    "category": "Restaurants & Food",
-    "description": "Artisan bakery specializing in custom cakes, fresh bread, and delectable pastries. Made fresh daily with premium ingredients.",
-    "address": "258 Baker Street, Old Town",
-    "phone": "+1 (555) 890-1234",
-    "website": "https://sweetdreamsbakery.com",
-    "rating": 4.9,
-    "reviews": 267
-  },
-  {
-    "id": 9,
-    "name": "Vintage Vinyl Records",
-    "category": "Music & Entertainment",
-    "description": "Rare and classic vinyl records, CDs, and music memorabilia. A treasure trove for music enthusiasts and collectors.",
-    "address": "369 Music Row, Entertainment District",
-    "phone": "+1 (555) 901-2345",
-    "website": "https://vintagevinyl.com",
-    "rating": 4.1,
-    "reviews": 73
-  },
-  {
-    "id": 10,
-    "name": "Auto Care Express",
-    "category": "Automotive",
-    "description": "Professional auto repair and maintenance services. Quick oil changes, tire services, and comprehensive vehicle inspections.",
-    "address": "741 Service Road, Industrial Area",
-    "phone": "+1 (555) 012-3456",
-    "website": "https://autocareexpress.com",
-    "rating": 4.0,
-    "reviews": 145
-  },
-  {
-    "id": 11,
-    "name": "Zen Spa & Wellness",
-    "category": "Health & Beauty",
-    "description": "Relaxing spa offering massages, facials, and wellness treatments. Escape the stress and rejuvenate your mind and body.",
-    "address": "852 Tranquil Avenue, Wellness Center",
-    "phone": "+1 (555) 123-4569",
-    "website": "https://zenspa.com",
-    "rating": 4.7,
-    "reviews": 189
-  },
-  {
-    "id": 12,
-    "name": "Kids Corner Toy Store",
-    "category": "Toys & Games",
-    "description": "Magical toy store with educational toys, games, and gifts for children of all ages. Fostering creativity and imagination.",
-    "address": "963 Playground Place, Family District",
-    "phone": "+1 (555) 234-5679",
-    "website": "https://kidscorner.com",
-    "rating": 4.5,
-    "reviews": 112
-  },
-  {
-    "id": 13,
-    "name": "Home Essentials Store",
-    "category": "Home & Garden",
-    "description": "Everything you need for your home - furniture, decor, kitchenware, and organizational solutions at affordable prices.",
-    "address": "174 Comfort Street, Residential Area",
-    "phone": "+1 (555) 345-6780",
-    "website": "https://homeessentials.com",
-    "rating": 4.2,
-    "reviews": 156
-  },
-  {
-    "id": 14,
-    "name": "Artisan Jewelry Gallery",
-    "category": "Fashion & Accessories",
-    "description": "Handcrafted jewelry and accessories by local artisans. Unique pieces for special occasions and everyday elegance.",
-    "address": "285 Artisan Alley, Creative District",
-    "phone": "+1 (555) 456-7891",
-    "website": "https://artisanjewelry.com",
-    "rating": 4.6,
-    "reviews": 78
-  },
-  {
     "id": 15,
     "name": "Morning Brew Cafe",
     "category": "Coffee & Tea",
+    "subcategory": "Cafe",
     "description": "Neighborhood cafe serving specialty coffee, tea blends, and homemade breakfast items. Your perfect morning destination.",
     "address": "396 Sunrise Boulevard, Neighborhood Center",
     "phone": "+1 (555) 567-8902",
@@ -203,6 +112,7 @@ async function loadShopsData() {
     }
     
     createCategoryFilters();
+    createSubcategoryFilters();
     displayShops(shopsData);
 }
 
@@ -239,20 +149,101 @@ function createCategoryFilters() {
     allButton.addEventListener('click', () => filterShops('all'));
 }
 
+// Create subcategory filter buttons
+function createSubcategoryFilters() {
+    const subcategories = [...new Set(shopsData.map(shop => shop.subcategory))];
+    
+    // Clear existing filters except "All Subcategories"
+    const allSubButton = subcategoryFilters.querySelector('[data-subcategory="all"]');
+    subcategoryFilters.innerHTML = '';
+    subcategoryFilters.appendChild(allSubButton);
+    
+    // Add subcategory-specific filters
+    subcategories.forEach(subcategory => {
+        const button = document.createElement('button');
+        button.className = 'filter-btn sub-filter';
+        button.dataset.subcategory = subcategory;
+        button.textContent = subcategory;
+        button.addEventListener('click', () => filterBySubcategory(subcategory));
+        subcategoryFilters.appendChild(button);
+    });
+    
+    // Add event listener to "All Subcategories" button
+    allSubButton.addEventListener('click', () => filterBySubcategory('all'));
+}
+
 // Filter shops by category
 function filterShops(category) {
     currentCategory = category;
+    currentSubcategory = 'all'; // Reset subcategory when changing category
     
     // Update active button
-    document.querySelectorAll('.filter-btn').forEach(btn => {
+    document.querySelectorAll('.category-filters .filter-btn').forEach(btn => {
         btn.classList.remove('active');
     });
     document.querySelector(`[data-category="${category}"]`).classList.add('active');
     
+    // Reset subcategory filter
+    document.querySelectorAll('.subcategory-filters .filter-btn').forEach(btn => {
+        btn.classList.remove('active');
+    });
+    document.querySelector('[data-subcategory="all"]').classList.add('active');
+    
+    // Update subcategory options based on selected category
+    updateSubcategoryOptions(category);
+    
     // Filter and display shops
-    const filteredShops = category === 'all' 
-        ? shopsData 
-        : shopsData.filter(shop => shop.category === category);
+    applyFilters();
+}
+
+// Filter shops by subcategory
+function filterBySubcategory(subcategory) {
+    currentSubcategory = subcategory;
+    
+    // Update active button
+    document.querySelectorAll('.subcategory-filters .filter-btn').forEach(btn => {
+        btn.classList.remove('active');
+    });
+    document.querySelector(`[data-subcategory="${subcategory}"]`).classList.add('active');
+    
+    // Filter and display shops
+    applyFilters();
+}
+
+// Update subcategory options based on selected category
+function updateSubcategoryOptions(category) {
+    const relevantShops = category === 'all' ? shopsData : shopsData.filter(shop => shop.category === category);
+    const subcategories = [...new Set(relevantShops.map(shop => shop.subcategory))];
+    
+    // Clear existing subcategory filters except "All"
+    const allSubButton = subcategoryFilters.querySelector('[data-subcategory="all"]');
+    subcategoryFilters.innerHTML = '';
+    subcategoryFilters.appendChild(allSubButton);
+    
+    // Add relevant subcategory filters
+    subcategories.forEach(subcategory => {
+        const button = document.createElement('button');
+        button.className = 'filter-btn sub-filter';
+        button.dataset.subcategory = subcategory;
+        button.textContent = subcategory;
+        button.addEventListener('click', () => filterBySubcategory(subcategory));
+        subcategoryFilters.appendChild(button);
+    });
+}
+
+// Apply both category and subcategory filters
+function applyFilters() {
+    let filteredShops = shopsData;
+    
+    // Apply category filter
+    if (currentCategory !== 'all') {
+        filteredShops = filteredShops.filter(shop => shop.category === currentCategory);
+    }
+    
+    // Apply subcategory filter
+    if (currentSubcategory !== 'all') {
+        filteredShops = filteredShops.filter(shop => shop.subcategory === currentSubcategory);
+    }
     
     displayShops(filteredShops);
 }
@@ -275,6 +266,7 @@ function createShopCard(shop) {
         <div class="shop-card">
             <h3>${shop.name}</h3>
             <span class="shop-category">${shop.category}</span>
+            <span class="shop-subcategory">${shop.subcategory}</span>
             <p class="shop-description">${shop.description}</p>
             <div class="shop-info">
                 <div>${shop.address}</div>
@@ -338,21 +330,27 @@ function setupSearchFunctionality() {
 // Search functionality
 function searchShops(query) {
     if (!query) {
-        filterShops(currentCategory);
+        applyFilters();
         return;
     }
     
-    // Reset category filter to show all when searching
+    // Reset category and subcategory filters to show all when searching
     currentCategory = 'all';
+    currentSubcategory = 'all';
     document.querySelectorAll('.filter-btn').forEach(btn => {
         btn.classList.remove('active');
     });
     document.querySelector('[data-category="all"]').classList.add('active');
+    document.querySelector('[data-subcategory="all"]').classList.add('active');
+    
+    // Update subcategory options to show all
+    updateSubcategoryOptions('all');
     
     const filteredShops = shopsData.filter(shop => 
         shop.name.toLowerCase().includes(query.toLowerCase()) ||
         shop.description.toLowerCase().includes(query.toLowerCase()) ||
         shop.category.toLowerCase().includes(query.toLowerCase()) ||
+        shop.subcategory.toLowerCase().includes(query.toLowerCase()) ||
         shop.address.toLowerCase().includes(query.toLowerCase())
     );
     
