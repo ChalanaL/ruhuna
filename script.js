@@ -5,10 +5,13 @@ let currentCategory = 'all';
 // DOM elements
 const shopGrid = document.getElementById('shopGrid');
 const categoryFilters = document.getElementById('categoryFilters');
+const searchInput = document.getElementById('searchInput');
+const clearSearchBtn = document.getElementById('clearSearch');
 
 // Initialize the application
 document.addEventListener('DOMContentLoaded', function() {
     loadShopsData();
+    setupSearchFunctionality();
 });
 
 // Load shops data from JSON file
@@ -139,17 +142,43 @@ function generateStarRating(rating) {
     return stars;
 }
 
-// Search functionality (optional enhancement)
+// Setup search functionality
+function setupSearchFunctionality() {
+    if (searchInput) {
+        searchInput.addEventListener('input', function() {
+            const query = this.value.trim();
+            searchShops(query);
+        });
+    }
+    
+    if (clearSearchBtn) {
+        clearSearchBtn.addEventListener('click', function() {
+            searchInput.value = '';
+            searchShops('');
+            searchInput.focus();
+        });
+    }
+}
+
+// Search functionality
 function searchShops(query) {
     if (!query) {
         filterShops(currentCategory);
         return;
     }
     
+    // Reset category filter to show all when searching
+    currentCategory = 'all';
+    document.querySelectorAll('.filter-btn').forEach(btn => {
+        btn.classList.remove('active');
+    });
+    document.querySelector('[data-category="all"]').classList.add('active');
+    
     const filteredShops = shopsData.filter(shop => 
         shop.name.toLowerCase().includes(query.toLowerCase()) ||
         shop.description.toLowerCase().includes(query.toLowerCase()) ||
-        shop.category.toLowerCase().includes(query.toLowerCase())
+        shop.category.toLowerCase().includes(query.toLowerCase()) ||
+        shop.address.toLowerCase().includes(query.toLowerCase())
     );
     
     displayShops(filteredShops);

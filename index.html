@@ -3,7 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shop Directory</title>
+    <title>Shop Directory - Discover Amazing Local Shops</title>
+    <meta name="description" content="Discover amazing local shops in your area. Browse by category including restaurants, fashion, electronics, and more.">
+    <meta name="author" content="Shop Directory">
+    <meta name="keywords" content="shops, local business, directory, restaurants, fashion, electronics, services">
+    
+    <!-- Open Graph meta tags for social sharing -->
+    <meta property="og:title" content="Shop Directory - Discover Amazing Local Shops">
+    <meta property="og:description" content="Browse and discover local shops by category. Find restaurants, fashion stores, electronics, and more.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://chalanalanguage.github.io/ruhuna/">
+    
+    <!-- Twitter Card meta tags -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Shop Directory">
+    <meta name="twitter:description" content="Discover amazing local shops in your area">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -15,6 +33,13 @@
     </header>
 
     <main class="container">
+        <section class="search-section">
+            <div class="search-container">
+                <input type="text" id="searchInput" placeholder="Search shops by name, category, or description..." autocomplete="off">
+                <button id="clearSearch" class="clear-btn" title="Clear search">×</button>
+            </div>
+        </section>
+
         <section class="filters">
             <h2>Filter by Category</h2>
             <div class="category-filters" id="categoryFilters">
