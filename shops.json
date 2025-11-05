@@ -222,5 +222,47 @@
     "website": "@_Roo design tailers",
     "rating": 4.6,
     "reviews": 12
+  },
+  {
+    "id": 17,
+    "name": "Maduka Video & Communication",
+    "category": "Services",
+    "subcategory": "Communication & Printing",
+    "description": "Photo copy, print out, laminating, binding, CD/DVD game and film.",
+    "district": "Matara",
+    "city": "Karagoda Uyanagoda",
+    "address": "Gandhi learners house, Ruhunugama, Karagoda, Uyanagoda",
+    "contact": "0770389776",
+    "website": "",
+    "rating": 4.4,
+    "reviews": 12
+  },
+  {
+    "id": 18,
+    "name": "Eeswara Hotel",
+    "category": "Food",
+    "subcategory": "Restaurant & Bakery",
+    "description": "Bakery foods (cake, pastries), Rice and curry, Kottu, Fried rice.",
+    "district": "Matara",
+    "city": "Karagoda Uyanagoda",
+    "address": "Eeswara Hotel, Ruhunugama, Karagoda, Uyanagoda",
+    "contact": "0412293695",
+    "website": "",
+    "rating": 4.3,
+    "reviews": 12
+  },
+  {
+    "id": 19,
+    "name": "Maduka Fancy",
+    "category": "Fashion",
+    "subcategory": "Fancy Items Shop",
+    "description": "Fancy items.",
+    "district": "Matara",
+    "city": "Karagoda Uyanagoda",
+    "address": "Kandhi learners house, Ruhunugama, Karagoda, Uyanagoda",
+    "contact": "0770389776",
+    "website": "",
+    "rating": 4.2,
+    "reviews": 12
   }
 ]
