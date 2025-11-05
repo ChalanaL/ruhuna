@@ -20,15 +20,17 @@ document.addEventListener('DOMContentLoaded', function() {
 const fallbackShopsData = [
   {
     "id": 1,
-    "name": "Urban Coffee House2",
-    "category": "Food & Beverages",
-    "subcategory": "Coffee & Tea",
-    "description": "A cozy coffee shop serving artisanal coffee, fresh pastries, and light meals. Perfect for work, study, or catching up with friends.",
-    "address": "123 Main Street, Downtown",
-    "phone": "+1 (555) 123-4567",
-    "website": "https://urbancoffeehouse.com",
-    "rating": 4.5,
-    "reviews": 127
+    "name": "Supipi Pharmacy",
+    "category": "Health",
+    "subcategory": "Pharmacy and Grocery",
+    "description": "Pharmaceutical Products, Package foods (Milk powder, Biscuits Products, etc) and other grocery items.",
+    "district": "Matara",
+    "city": "Kamburupitiya",
+    "address": "Matara Road, Kamburubitiya",
+    "phone": "0712066446",
+    "website": "",
+    "rating": 4.6,
+    "reviews": 12
   }
 ];
 
@@ -76,14 +78,14 @@ async function loadShopsData() {
 
 // Show loading state
 function showLoading() {
-    shopGrid.innerHTML = '<div class="loading">Loading shops...</div>';
+    shopGrid.innerHTML = '<div class="loading">Loading businesses...</div>';
 }
 
 // Create category filter buttons
 function createCategoryFilters() {
     const categories = [...new Set(shopsData.map(shop => shop.category))];
     
-    // Clear existing filters except "All Shops"
+    // Clear existing filters except "All Businesses"
     const allButton = categoryFilters.querySelector('[data-category="all"]');
     categoryFilters.innerHTML = '';
     categoryFilters.appendChild(allButton);
@@ -98,7 +100,7 @@ function createCategoryFilters() {
         categoryFilters.appendChild(button);
     });
     
-    // Add event listener to "All Shops" button
+    // Add event listener to "All Businesses" button
     allButton.addEventListener('click', () => filterShops('all', 'all'));
 }
 
@@ -197,7 +199,7 @@ function filterShops(category, subcategory) {
 // Display shops in the grid
 function displayShops(shops) {
     if (shops.length === 0) {
-        shopGrid.innerHTML = '<div class="loading">No shops found in this category.</div>';
+        shopGrid.innerHTML = '<div class="loading">No businesses found.</div>';
         return;
     }
     
@@ -215,9 +217,11 @@ function createShopCard(shop) {
             ${shop.subcategory ? `<span class="shop-subcategory">${shop.subcategory}</span>` : ''}
             <p class="shop-description">${shop.description}</p>
             <div class="shop-info">
-                <div>${shop.address}</div>
-                ${shop.phone ? `<div>${shop.phone}</div>` : ''}
-                ${shop.website ? `<div><a href="${shop.website}" target="_blank" rel="noopener">Visit Website</a></div>` : ''}
+                ${shop.district ? `<div><strong>📍 District:</strong> ${shop.district}</div>` : ''}
+                ${shop.city ? `<div><strong>🏙️ City:</strong> ${shop.city}</div>` : ''}
+                <div><strong>📌 Address:</strong> ${shop.address}</div>
+                ${shop.phone ? `<div><strong>📞 Phone:</strong> <a href="tel:${shop.phone.replace(/\s/g, '')}">${shop.phone}</a></div>` : ''}
+                ${shop.website && shop.website.trim() ? `<div><strong>🌐 Website:</strong> <a href="${shop.website.startsWith('http') ? shop.website : 'https://' + shop.website}" target="_blank" rel="noopener">${shop.website}</a></div>` : ''}
             </div>
             ${shop.rating ? `
                 <div class="shop-rating">
@@ -286,7 +290,10 @@ function searchShops(query) {
         shop.description.toLowerCase().includes(query.toLowerCase()) ||
         shop.category.toLowerCase().includes(query.toLowerCase()) ||
         shop.subcategory?.toLowerCase().includes(query.toLowerCase()) ||
-        shop.address.toLowerCase().includes(query.toLowerCase())
+        shop.address.toLowerCase().includes(query.toLowerCase()) ||
+        shop.city?.toLowerCase().includes(query.toLowerCase()) ||
+        shop.district?.toLowerCase().includes(query.toLowerCase()) ||
+        shop.phone?.toLowerCase().includes(query.toLowerCase())
     );
     
     displayShops(filteredShops);
