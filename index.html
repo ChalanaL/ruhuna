@@ -3,21 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shops near UOR - Discover Amazing Local Shops</title>
-    <meta name="description" content="Discover amazing local shops in your area. Browse by category including restaurants, fashion, electronics, and more.">
-    <meta name="author" content="Shop Directory">
-    <meta name="keywords" content="shops, local business, directory, restaurants, fashion, electronics, services">
+    <title>City Guide - Discover Local Businesses & Services</title>
+    <meta name="description" content="Your complete city guide to discover local businesses and services. Browse shops, restaurants, salons, and more by category.">
+    <meta name="author" content="City Guide">
+    <meta name="keywords" content="city guide, local business, directory, shops, restaurants, services, Kamburupitiya, Matara">
     
     <!-- Open Graph meta tags for social sharing -->
-    <meta property="og:title" content="Shops near UOR - Discover Amazing Local Shops">
-    <meta property="og:description" content="Browse and discover local shops by category. Find restaurants, fashion stores, electronics, and more.">
+    <meta property="og:title" content="City Guide - Discover Local Businesses & Services">
+    <meta property="og:description" content="Browse and discover local businesses by category. Find restaurants, salons, shops, and more.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://chalanalanguage.github.io/ruhuna/">
     
     <!-- Twitter Card meta tags -->
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="Shops near UOR">
-    <meta name="twitter:description" content="Discover amazing local shops in your area">
+    <meta name="twitter:title" content="City Guide">
+    <meta name="twitter:description" content="Discover local businesses and services in your area">
     
     <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
@@ -27,15 +27,15 @@
 <body>
     <header>
         <div class="container">
-            <h1>Shops near UOR</h1>
-            <p>Discover amazing shops in your area</p>
+            <h1>City Guide</h1>
+            <p>Discover local businesses and services in your area</p>
         </div>
     </header>
 
     <main class="container">
         <section class="search-section">
             <div class="search-container">
-                <input type="text" id="searchInput" placeholder="Search shops by name, category, or description..." autocomplete="off">
+                <input type="text" id="searchInput" placeholder="Search by name, category, or location..." autocomplete="off">
                 <button id="clearSearch" class="clear-btn" title="Clear search">×</button>
             </div>
         </section>
@@ -43,25 +43,25 @@
         <section class="filters">
             <h2>Filter by Category</h2>
             <div class="category-filters" id="categoryFilters">
-                <button class="filter-btn active" data-category="all">All Shops</button>
+                <button class="filter-btn active" data-category="all">All Businesses</button>
             </div>
             
             <h3>Filter by Subcategory</h3>
             <div class="subcategory-filters" id="subcategoryFilters">
-                <button class="filter-btn sub-filter active" data-subcategory="all">All Subcategories</button>
+                <button class="filter-btn active" data-subcategory="all">All Subcategories</button>
             </div>
         </section>
 
         <section class="shops">
             <div class="shop-grid" id="shopGrid">
-                <!-- Shops will be loaded here dynamically -->
+                <!-- Shop cards will be dynamically inserted here -->
             </div>
         </section>
     </main>
 
     <footer>
         <div class="container">
-            <p>&copy; 2025 Shop Directory. All rights reserved.</p>
+            <p>&copy; 2025 City Guide. All rights reserved.</p>
         </div>
     </footer>
 
