@@ -217,11 +217,12 @@ function createShopCard(shop) {
             ${shop.subcategory ? `<span class="shop-subcategory">${shop.subcategory}</span>` : ''}
             <p class="shop-description">${shop.description}</p>
             <div class="shop-info">
-                ${shop.district ? `<div><strong>📍 District:</strong> ${shop.district}</div>` : ''}
-                ${shop.city ? `<div><strong>🏙️ City:</strong> ${shop.city}</div>` : ''}
-                <div><strong>📌 Address:</strong> ${shop.address}</div>
-                ${shop.phone ? `<div><strong>📞 Phone:</strong> <a href="tel:${shop.phone.replace(/\s/g, '')}">${shop.phone}</a></div>` : ''}
-                ${shop.website && shop.website.trim() ? `<div><strong>🌐 Website:</strong> <a href="${shop.website.startsWith('http') ? shop.website : 'https://' + shop.website}" target="_blank" rel="noopener">${shop.website}</a></div>` : ''}
+                ${shop.district ? `<div><strong>District:</strong> ${shop.district}</div>` : ''}
+                ${shop.city ? `<div><strong>City:</strong> ${shop.city}</div>` : ''}
+                <div><strong>Address:</strong> ${shop.address}</div>
+                ${shop.phone ? `<div><strong>Phone:</strong> <a href="tel:${shop.phone.replace(/\s/g, '')}">${shop.phone}</a></div>` : ''}
+                ${shop.contact ? `<div><strong>Phone:</strong> <a href="tel:${shop.contact.replace(/\s/g, '')}">${shop.contact}</a></div>` : ''}
+                ${shop.website && shop.website.trim() ? `<div><strong>Website:</strong> <a href="${shop.website.startsWith('http') ? shop.website : 'https://' + shop.website}" target="_blank" rel="noopener">${shop.website}</a></div>` : ''}
             </div>
             ${shop.rating ? `
                 <div class="shop-rating">
