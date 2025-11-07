@@ -58,7 +58,7 @@
   {
     "id": 5,
     "name": "Salon Nilu",
-    "category": "Beauty",
+    "category": "Fashion & Beauty",
     "subcategory": "Salon",
     "description": "Bridal Hair Care and Beauty Lounge. Provide hair treatments, eyelash extensions, acrylic nails, professional makeup application, skin and body care.",
     "district": "Matara",
@@ -72,7 +72,7 @@
   {
     "id": 6,
     "name": "Style Me",
-    "category": "Beauty",
+    "category": "Fashion & Beauty",
     "subcategory": "Salon",
     "description": "Bridal and Groom dressing studio. Provide all beauty services (Hair styling, Coloring, Manicures, Pedicures, Makeup, Skin and body care).",
     "district": "Matara",
@@ -86,7 +86,7 @@
   {
     "id": 7,
     "name": "New Deniyaya Asiri Cake",
-    "category": "Foods and Sweets",
+    "category": "Food",
     "subcategory": "Cake Shop",
     "description": "Any type of cakes, customized cakes and other sweets.",
     "district": "Matara",
@@ -101,7 +101,7 @@
     "id": 8,
     "name": "S.S.T Cool Spot & Bakers",
     "category": "Food",
-    "subcategory": "Bakery and Grocery",
+    "subcategory": "Grocery and Bakery",
     "description": "Bakery foods (breads, cookies, pastries and other baked goods), Fried Rice, Kottu.",
     "district": "Matara",
     "city": "Kamburupitiya",
@@ -142,7 +142,7 @@
   {
     "id": 11,
     "name": "Lovers Mega City",
-    "category": "Beauty",
+    "category": "Fashion & Beauty",
     "subcategory": "Cosmetics and Gifts",
     "description": "Ladies and gents cosmetics, saloon items, gift items.",
     "district": "Matara",
@@ -156,7 +156,7 @@
   {
     "id": 12,
     "name": "Uma Tailers",
-    "category": "Beauty",
+    "category": "Fashion & Beauty",
     "subcategory": "Tailor Shop",
     "description": "Design ladies clothes.",
     "district": "Matara",
@@ -184,7 +184,7 @@
   {
     "id": 14,
     "name": "Saloon Yasas",
-    "category": "Beauty",
+    "category": "Fashion & Beauty",
     "subcategory": "Men's Salon",
     "description": "A place offering haircut and styling services for men.",
     "district": "Matara",
@@ -198,7 +198,7 @@
   {
     "id": 15,
     "name": "Saloon Kavya",
-    "category": "Beauty",
+    "category": "Fashion & Beauty",
     "subcategory": "Ladies Salon",
     "description": "A beauty saloon providing skin, hair and makeup services for women.",
     "district": "Matara",
@@ -212,7 +212,7 @@
   {
     "id": 16,
     "name": "Roo Design Tailers",
-    "category": "Beauty",
+    "category": "Fashion & Beauty",
     "subcategory": "Men's Tailor Shop",
     "description": "A shop that stitches and rents men's coat and trousers for special occasions.",
     "district": "Matara",
@@ -254,7 +254,7 @@
   {
     "id": 19,
     "name": "Maduka Fancy",
-    "category": "Fashion",
+    "category": "Fashion & Beauty",
     "subcategory": "Fancy Items Shop",
     "description": "Fancy items.",
     "district": "Matara",
@@ -268,7 +268,7 @@
   {
     "id": 20,
     "name": "Kamburupitiya Book Shop",
-    "category": "Retail",
+    "category": "Work & Study Essentials",
     "subcategory": "Books & Stationery",
     "description": "All types of school and office stationery, books, and photocopy services.",
     "district": "Matara",
@@ -282,7 +282,7 @@
   {
     "id": 21,
     "name": "Smart Tech Solutions",
-    "category": "Electronics",
+    "category": "Electronics & Technology",
     "subcategory": "Computer & Mobile Repair",
     "description": "Computer, laptop, and mobile phone repairs with accessories.",
     "district": "Matara",
@@ -296,7 +296,7 @@
   {
     "id": 22,
     "name": "Fresh Mart",
-    "category": "Grocery",
+    "category": "Food",
     "subcategory": "Supermarket",
     "description": "Groceries, vegetables, fruits, and daily household items.",
     "district": "Matara",
@@ -324,7 +324,7 @@
   {
     "id": 24,
     "name": "Dream Cuts Salon",
-    "category": "Personal Care",
+    "category": "Fashion & Beauty",
     "subcategory": "Salon & Beauty",
     "description": "Ladies and gents salon with modern hair styling and beauty care.",
     "district": "Matara",
@@ -338,7 +338,7 @@
   {
     "id": 25,
     "name": "Green Leaf Juice Bar",
-    "category": "Food & Beverages",
+    "category": "Food",
     "subcategory": "Juice & Snack Bar",
     "description": "Fresh juices, smoothies, and snacks made daily.",
     "district": "Matara",
@@ -366,7 +366,7 @@
   {
     "id": 27,
     "name": "Ruhunu Hardware",
-    "category": "Retail",
+    "category": "Other",
     "subcategory": "Hardware & Tools",
     "description": "Building materials, tools, and plumbing equipment.",
     "district": "Matara",
@@ -394,7 +394,7 @@
   {
     "id": 29,
     "name": "Royal Garments",
-    "category": "Retail",
+    "category": "Fashion & Beauty",
     "subcategory": "Clothing Store",
     "description": "Men's and women's clothing and school uniforms.",
     "district": "Matara",
